@@ -293,7 +293,7 @@ public class AzurePackDatabaseSupport implements RelationalDatabaseSupport {
             @Override
             public boolean evaluate(Object object) {
                 WAPDatabaseProducts products = (WAPDatabaseProducts)object;
-                return provider.getContext().getCloud().getCloudName().equalsIgnoreCase(products.getCloud()) && provider.getContext().getCloud().getProviderName().equalsIgnoreCase(products.getProvider());
+                return provider.getContext().getCloud().getProviderName().equalsIgnoreCase(products.getProvider());
             }
         });
 
